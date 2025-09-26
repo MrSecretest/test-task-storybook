@@ -1,35 +1,40 @@
 "use client"
-import React, { useRef } from 'react'
-
+import React, { useRef, useState } from 'react'
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import CloseIcon from '@mui/icons-material/Close';
 type InputProps = {
-    type?: string,
-    clearable?: boolean,
+    type?: string;
+    clearable?: boolean;
 }
 
 function Input({ type = "text", clearable = false }: InputProps) {
     const inputRef = useRef<HTMLInputElement | null>(null);
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+
     const handleClear = () => {
-        if (inputRef.current)
-            inputRef.current.value = ""
+        if (inputRef.current) inputRef.current.value = "";
+        setIsPasswordVisible(false);
+
     }
+
     const handleVisibility = () => {
-        if (!inputRef.current) {
-            return
-        }
-        if (inputRef.current.type === "password") {
-            inputRef.current.type = "text"
-        }
-        else {
-            inputRef.current.type = type
-        }
+        setIsPasswordVisible(prev => !prev);
     }
+
+    const inputType = type === "password" && isPasswordVisible ? "text" : type;
+
     return (
-        <div>
-            <input ref={inputRef} type={type}></input>
-            {clearable ? <button className='button-sm' onClick={() => handleClear()}>X</button> : null}
-            {type === "password" ? <button className='button-sm' onClick={() => handleVisibility()}>O</button> : null}
+        <div className='input-container'>
+            <input placeholder={`Enter your ${type}`} ref={inputRef} type={inputType} />
+            {clearable && <button className='button-sm' onClick={handleClear}><CloseIcon /></button>}
+            {type === "password" && (
+                <button className='button-sm' onClick={handleVisibility}>
+                    {isPasswordVisible ? < VisibilityOffIcon /> : < RemoveRedEyeIcon />}
+                </button>
+            )}
         </div>
     )
 }
 
-export default Input
+export default Input;
