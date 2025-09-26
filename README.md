@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### Test Task Overview
 
-## Getting Started
+This test task demonstrates the use of Storybook to test three components.
+1. Components are located in `src/app/components/ComponentName`;
+2. Stories are located in `src/stories/ComponentName`;
 
-First, run the development server:
+To launch:
+1. Clone this repository;
+2. Run `npm install`;
+3. Run `npm run storybook`;
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Quick overview
+Input field has 2 props:
+1. `type` - sets type of the input field;
+2. `clearable` - allows user to press "X" button to clear the input field;
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Toast has 3 props:
+1. `message` - display message of the Toast;
+2. `duration` - duration before toast dissapears (in seconds);
+3. `animation` - either `slide` or `fade`;
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+SidebarMenu has 3 props:
+1. `hidden` - configures if sidebar is opened or closed on first render;
+2. `openedIndex` - sets index of expanded header with links inside;
+3. `items` - contains elements of sidebar, such as headers and links inside
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+I have used `motion dev` to control most of the animations of the application.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<img width="2877" height="1463" alt="Input" src="https://github.com/user-attachments/assets/6a8e553e-5175-4d03-a179-5901bbd2a3b5" />
+Input field
+<img width="2877" height="1463" alt="Password" src="https://github.com/user-attachments/assets/ebe51286-e4cf-417f-ad29-6b98ddc6da09" />
+Password field
+<img width="2877" height="1463" alt="VisibilityToggled" src="https://github.com/user-attachments/assets/bbd152a8-c7e3-489a-a72f-fb4a880fc044" />
+VisibilityToggled
+<img width="2877" height="1463" alt="ClearableVisibility" src="https://github.com/user-attachments/assets/70364ba9-715a-402f-aa84-9f43a42949e5" />
+Clearable vsisiblitiy
+<img width="2877" height="1463" alt="NavigationHidden" src="https://github.com/user-attachments/assets/45036dcc-067a-4af1-95e0-399eb5ade6c0" />
+Hidden sidebar
+<img width="2877" height="1463" alt="NavigationOpened" src="https://github.com/user-attachments/assets/36591a2b-15a4-4a5e-aa36-aa71f86cd448" />
+Sidebar opened
+<img width="2877" height="1463" alt="Toster" src="https://github.com/user-attachments/assets/05fdb369-3a8d-4e78-8a18-cea7979b36c0" />
+Toster
+<img width="2877" height="1463" alt="TosterFadeAnimation" src="https://github.com/user-attachments/assets/5102fa05-1cbf-45fb-8318-b3af533d84fc" />
+Toster with fading navigation
