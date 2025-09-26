@@ -3,6 +3,8 @@
 This test task demonstrates the use of Storybook to test three components.
 1. Components are located in `src/app/components/ComponentName`;
 2. Stories are located in `src/stories/ComponentName`;
+3. I have used `motion dev` to control most of the animations of the application.
+4. Also I have used `MUI Icons` for buttons
 
 To launch:
 1. Clone this repository;
@@ -24,7 +26,6 @@ SidebarMenu has 3 props:
 2. `openedIndex` - sets index of expanded header with links inside;
 3. `items` - contains elements of sidebar, such as headers and links inside
 
-I have used `motion dev` to control most of the animations of the application.
 
 <img width="2877" height="1463" alt="Input" src="https://github.com/user-attachments/assets/6a8e553e-5175-4d03-a179-5901bbd2a3b5" />
 Input field
