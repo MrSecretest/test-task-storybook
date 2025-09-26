@@ -4,7 +4,8 @@ const config: StorybookConfig = {
   "stories": [
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
-  "addons": [],
+  "addons": [
+  ],
   "framework": {
     "name": "@storybook/nextjs",
     "options": {}

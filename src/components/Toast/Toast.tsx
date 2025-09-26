@@ -2,6 +2,7 @@
 import { animate } from 'motion'
 import { AnimatePresence, motion } from 'motion/react'
 import React, { useEffect, useRef, useState } from 'react'
+import CloseIcon from '@mui/icons-material/Close';
 
 
 type ToastProps = {
@@ -51,7 +52,7 @@ function Toast({ animation = "slide", message = "default message", duration = 3 
                 <motion.div
                     {...animation === "slide" ? { ...slideTransition } : { ...fadeTransition }}
                     className='toast'>{message}
-                    <button className='toast-decline button-sm' onClick={() => (setShow(false))}>X</button>
+                    <button className='toast-decline button-sm' onClick={() => (setShow(false))}><CloseIcon /></button>
                 </motion.div>
             )}
         </AnimatePresence>

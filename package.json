@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@storybook/addon-docs": "^9.1.8",
     "@storybook/nextjs": "^9.1.8",
     "@types/node": "^20",
     "@types/react": "^19",

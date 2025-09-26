@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react'
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import CloseIcon from '@mui/icons-material/Close';
+import "@/app/globals.css"
 type InputProps = {
     type?: string;
     clearable?: boolean;
@@ -15,7 +16,6 @@ function Input({ type = "text", clearable = false }: InputProps) {
     const handleClear = () => {
         if (inputRef.current) inputRef.current.value = "";
         setIsPasswordVisible(false);
-
     }
 
     const handleVisibility = () => {
@@ -23,16 +23,16 @@ function Input({ type = "text", clearable = false }: InputProps) {
     }
 
     const inputType = type === "password" && isPasswordVisible ? "text" : type;
-
     return (
         <div className='input-container'>
             <input placeholder={`Enter your ${type}`} ref={inputRef} type={inputType} />
-            {clearable && <button className='button-sm' onClick={handleClear}><CloseIcon /></button>}
             {type === "password" && (
                 <button className='button-sm' onClick={handleVisibility}>
                     {isPasswordVisible ? < VisibilityOffIcon /> : < RemoveRedEyeIcon />}
                 </button>
             )}
+            {clearable && <button className='button-sm' onClick={handleClear}><CloseIcon /></button>}
+
         </div>
     )
 }

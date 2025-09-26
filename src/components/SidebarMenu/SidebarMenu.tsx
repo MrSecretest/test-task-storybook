@@ -5,6 +5,8 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Link from 'next/link';
 
 type SidebarMenuProps = {
+    hidden: boolean,
+    openedIndex?: number,
     items: Menu[]
 }
 interface Menu {
@@ -36,12 +38,16 @@ const menuItems = [
     { title: "Help", links: ["Documentation", "Guides", "Tutorials"] },
 
 ]
-function SidebarMenu({ items = menuItems }: SidebarMenuProps) {
+function SidebarMenu({ hidden = true, openedIndex, items = menuItems }: SidebarMenuProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
     const [isHidden, setIsHidden] = useState(true)
     const sidebarRef = useRef<HTMLDivElement | null>(null)
 
     useEffect(() => {
+        if (openedIndex) {
+            setOpenIndex(openedIndex)
+        }
+        setIsHidden(hidden)
         const handleClickOutside = (e: MouseEvent) => {
             if (sidebarRef.current && !sidebarRef.current.contains(e.target as Node)) {
                 setIsHidden(true)

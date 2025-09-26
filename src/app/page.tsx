@@ -8,9 +8,9 @@ export default function Home() {
 
   return (
     <div>
-      <SidebarMenu />
+      {/*<SidebarMenu openedIndex={2} />
       <Input type="password" clearable></Input>
-      <Toast duration={5} animation="fade" message="Test message" />
+      <Toast duration={5} animation="fade" message="Test message" />*/}
     </div>
   );
 }
