@@ -31,9 +31,9 @@ Input field
 <img width="2877" height="1463" alt="Password" src="https://github.com/user-attachments/assets/ebe51286-e4cf-417f-ad29-6b98ddc6da09" />
 Password field
 <img width="2877" height="1463" alt="VisibilityToggled" src="https://github.com/user-attachments/assets/bbd152a8-c7e3-489a-a72f-fb4a880fc044" />
-VisibilityToggled
+Visibility toggled
 <img width="2877" height="1463" alt="ClearableVisibility" src="https://github.com/user-attachments/assets/70364ba9-715a-402f-aa84-9f43a42949e5" />
-Clearable vsisiblitiy
+Clearable visibility
 <img width="2877" height="1463" alt="NavigationHidden" src="https://github.com/user-attachments/assets/45036dcc-067a-4af1-95e0-399eb5ade6c0" />
 Hidden sidebar
 <img width="2877" height="1463" alt="NavigationOpened" src="https://github.com/user-attachments/assets/36591a2b-15a4-4a5e-aa36-aa71f86cd448" />
